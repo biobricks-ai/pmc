@@ -1,4 +1,4 @@
-# clinvar
+# PMC
 <a href="https://github.com/biobricks-ai/PMC/actions"><img src="https://github.com/biobricks-ai/PMC/actions/workflows/bricktools-check.yaml/badge.svg?branch=master"/></a>
 
 ## Description
