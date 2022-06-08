@@ -1,0 +1,13 @@
+stages:
+  download:
+    cmd: chmod +x bash/parse_pmc.sh; ./bash/parse_pmc.sh
+    deps:
+    - bash/parse_pmc.sh
+    outs:
+    - download/
+  build:
+    cmd: Rscript R/process.R
+    deps:
+    - R/process.R
+    outs:
+    - data/
