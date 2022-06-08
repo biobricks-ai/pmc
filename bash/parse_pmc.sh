@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 ##Set-up env on linux/ubuntu
 if aws --version; then
     echo "Command succeeded: awscli installed"
@@ -52,15 +51,15 @@ for inputFile in $output_path/*.txt; do
 done
 
 ## Move sections of pmc data to proper directory
-for i in $output_path/*split00; do
+for i in $output_path/*split00*; do
   rm $i
 done
-for i in $output_path/*split03; do
+for i in $output_path/*split03*; do
   rm $i
 done
-for i in $output_path/*split01; do
-  mv $output_path/*_split01 $output_path/pmc_front;
+for i in $output_path/*split01*; do
+  mv $i $output_path/pmc_front;
 done
-for i in $output_path/*split02; do
-  mv $output_path/*split02 $output_path/pmc_body;
+for i in $output_path/*split02*; do
+  mv $i $output_path/pmc_body;
 done
