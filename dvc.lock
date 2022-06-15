@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: chmod +x bash/parse_pmc.sh; ./bash/parse_pmc.sh
+    deps:
+    - path: bash/parse_pmc.sh
+      md5: e3bdea8a506c58822e1f1886149889ba
+      size: 2398
+    outs:
+    - path: download/
+      md5: 9031d21e35134d84cedaf18b993d5d34.dir
+      size: 644022606
+      nfiles: 108
+  process:
+    cmd: Rscript R/process.R
+    deps:
+    - path: R/process.R
+      md5: ec7a63c850a45b975ffeb44bb3aa0f4e
+      size: 3347
+    outs:
+    - path: data/
+      md5: 20510155f5874bc4aa8a45362c094649.dir
+      size: 51216990082
+      nfiles: 1098

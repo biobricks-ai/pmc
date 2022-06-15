@@ -5,7 +5,7 @@ stages:
     - bash/parse_pmc.sh
     outs:
     - download/
-  build:
+  process:
     cmd: Rscript R/process.R
     deps:
     - R/process.R
